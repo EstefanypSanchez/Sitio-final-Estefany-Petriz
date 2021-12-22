@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: whitesmoke;
+    font-family: 'Faustina', serif;
+font-family: 'Grand Hotel', cursive;
+font-family: 'Signika Negative', sans-serif;
+color: white;
+}
+.grilla{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: 
+    "header header header header"
+    "principal principal principal principal";
+}
+header{
+    grid-area: header;
+}
+header nav{
+    text-align: right;
+    background-color: blanchedalmond;
+    height: 30px;
+    font-size: 20px;
+    padding-top: 5px;
+    padding-right: 35px;
+    word-spacing: 35px;
+}
+.boton-uno{
+    background: none;
+    font-size: 17px;
+    color:chocolate;
+   
+}
+ 
+.boton-uno:hover{
+background-color: chocolate;
+font-size: 20px;
+color:white;
+
+}
+.boton-dos{
+    background: none;
+    font-size: 17px;
+    color:chocolate;
+   
+}
+.boton-dos:hover{
+background-color: chocolate;
+font-size: 20px;
+color:white;
+
+}
+.principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/fondo.jpg");
+    background-size: cover;
+   min-height: 100vh;
+    grid-area: principal;
+    
+}
+
+header nav a{
+        text-decoration: none;
+    color:chocolate;
+    }
+h1{
+    text-align: center;
+    padding: 250px;
+    font-family: 'Faustina', serif;
+font-family: 'Grand Hotel', cursive;
+font-family: 'Signika Negative', sans-serif;
+color: white;
+}
+@media screen and(max-width: 768px){
+    .grilla{
+        grid-template-areas: 
+        "header header header header"
+        "principal principal principal principal";
+    }
+    .header nav{
+        display: flex;     
+        flex-direction: column; 
+        justify-content: center;
+        align-items: center;
+    }
+}
